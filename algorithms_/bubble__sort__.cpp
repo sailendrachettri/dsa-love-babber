@@ -5,6 +5,10 @@ Author: Sailendra */
 #include <bits/stdc++.h>
 using namespace std;
 
+//Time complexity
+// Best case: O(n)
+// Worst case: O(n^2)
+
 void printArr(int arr[], int size){
     for(int i = 0; i < size; i++){
         cout<<arr[i]<<" ";
