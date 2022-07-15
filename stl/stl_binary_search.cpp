@@ -28,16 +28,19 @@ int main()
     v1.push_back(16);
     v1.push_back(19);
     
-    printVector(v);
-    printVector(v1);
-    swap(v, v1);
-    printVector(v);
-    printVector(v1);
+    // printVector(v);
+    // printVector(v1);
+    // swap(v, v1);
+    // printVector(v);
+    // printVector(v1);
 
     // cout<<"find val: "<<binary_search(v.begin(), v.end(), 6)<<endl;
     // cout<<"lower_bound: "<<lower_bound(v.begin(), v.end(), 6)-v.begin()<<endl;
     // cout<<"upper_bound: "<<upper_bound(v.begin(), v.end(), 6)-v.begin()<<endl;
 
+    printVector(v);
+    rotate(v.begin(), v.begin()+2, v.end());
+    printVector(v);
 
 
     return 0;
