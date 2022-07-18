@@ -21,6 +21,14 @@ void reverseArray(char name[], int size){
     }
 }
 
+bool checkPanindrome(char name[], int size){
+    int start = 0, end = size-1;
+    while(start<end){
+        if(name[start++] != name[end--]) return false;
+    }
+    return true;
+}
+
 int main()
 {
     freopen("input.txt", "r", stdin);
@@ -31,8 +39,9 @@ int main()
 
     cout<<name<<endl;
     int len = getLength(name);
-    reverseArray(name, len);
-    cout<<name<<endl;
+    cout<<checkPanindrome(name, len);
+    // reverseArray(name, len);
+    // cout<<"reversed: "<<name<<endl;
 
     return 0;
 }
