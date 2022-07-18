@@ -13,6 +13,14 @@ int getLength(char name[]){
     return count;
 }
 
+void reverseArray(char name[], int size){
+    int start = 0, end = size-1;
+    while(start<=end){
+        swap(name[start++], name[end--]);
+
+    }
+}
+
 int main()
 {
     freopen("input.txt", "r", stdin);
@@ -21,7 +29,10 @@ int main()
     char name[20];
     cin>>name;
 
-    cout<<"length: "<<getLength(name);
+    cout<<name<<endl;
+    int len = getLength(name);
+    reverseArray(name, len);
+    cout<<name<<endl;
 
     return 0;
 }
