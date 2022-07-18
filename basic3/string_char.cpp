@@ -36,10 +36,13 @@ int main()
 
     char name[20];
     cin>>name;
-
+    string s; cin>>s;
+    name[2] = '\0';
+    s[2] = '\0';
     cout<<name<<endl;
+    cout<<s<<endl;
     int len = getLength(name);
-    cout<<checkPanindrome(name, len);
+    // cout<<checkPanindrome(name, len);
     // reverseArray(name, len);
     // cout<<"reversed: "<<name<<endl;
 
