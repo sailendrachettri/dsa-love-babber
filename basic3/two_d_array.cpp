@@ -22,6 +22,17 @@ void print2DArr(int arr[3][4], int row, int col){
     }cout<<endl;
 }
 
+void rowWiseSum(int arr[3][4], int row, int col){
+    int sum = 0;
+    for(int i = 0; i < row; i++){
+        for(int j = 0; j < col; j++){
+            sum += arr[i][j];
+        }
+        cout<<"sum for "<<i<<"th row: "<<sum<<endl;
+        sum = 0;
+    }
+}
+
 int main()
 {
     freopen("input.txt", "r", stdin);
@@ -37,10 +48,12 @@ int main()
     }
 
     print2DArr(arr, row, col);
-    
 
-    int target = 50;
-    cout<<target<<" is present or not: "<<isPresent(arr, target, row, col);
+    // int target = 50;
+    // cout<<target<<" is present or not: "<<isPresent(arr, target, row, col);
+
+    rowWiseSum(arr, row, col);
+
 
     return 0;
 }
