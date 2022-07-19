@@ -1,7 +1,6 @@
 /* Date: 18 - 07 - 2022
 Author: Sailendra */
 
-// 38min complected
 
 #include <iostream>
 #include <bits/stdc++.h>
