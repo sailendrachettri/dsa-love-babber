@@ -1,6 +1,8 @@
 /* Date: 18 - 07 - 2022
 Author: Sailendra */
 
+// 38min complected
+
 #include <iostream>
 #include <bits/stdc++.h>
 using namespace std;
@@ -23,13 +25,12 @@ void print2DArr(int arr[3][4], int row, int col){
 }
 
 void rowWiseSum(int arr[3][4], int row, int col){
-    int sum = 0;
     for(int i = 0; i < row; i++){
+        int sum = 0;
         for(int j = 0; j < col; j++){
             sum += arr[i][j];
         }
         cout<<"sum for "<<i<<"th row: "<<sum<<endl;
-        sum = 0;
     }
 }
 
