@@ -12,7 +12,7 @@ int countPrime(int n){
 
     for(int num = 2; num < n; num++){
         bool flag = true;
-        for(int i = 2; i < num-1; i++){
+        for(int i = 2; i <= sqrt(num); i++){
             if(num%i == 0){
                 flag = false;
                 break;
