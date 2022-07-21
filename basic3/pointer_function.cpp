@@ -34,7 +34,7 @@ int main()
     int *ptr = &value;
 
     print(ptr);
-    update(ptr);
+    update(ptr);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
     print(ptr);
 */
 
