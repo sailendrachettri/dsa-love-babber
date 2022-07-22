@@ -29,6 +29,13 @@ int sumOfArray(int *arr, int size){
     return sum;
 }
 
+bool linearSearch(int *arr, int size, int key){
+    if(size == 0) return false;
+
+    if(arr[0] == key) return true;
+    else return linearSearch(arr+1, size-1, key);
+}
+
 int main(){
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
@@ -41,6 +48,7 @@ int main(){
     bool ans = isSorted(arr, size);
     cout << ans << endl;
 */  
+/*
     int size; cin >> size;
     int *arr = new int[size];
 
@@ -50,6 +58,21 @@ int main(){
 
     int sum = sumOfArray(arr, size);
     cout << sum << endl;
+*/
+
+    int size; cin >> size;
+    int *arr = new int[size];
+
+    for(int i = 0; i < size; i++){
+        cin >> arr[i];
+    }
+
+    int key = 7;
+    int result = linearSearch(arr, size, key);
+    
+    if(result) cout << "Found" << endl;
+    else cout << "Not found" << endl;
+    
 
 
 
