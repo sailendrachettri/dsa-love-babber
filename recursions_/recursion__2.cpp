@@ -25,6 +25,19 @@ int fibonacci(int num){
     return fibonacci(num - 1) + fibonacci(num - 2); 
 }
 
+void sayNumber(int num, string arr[]){
+    // base case
+    if(num == 0) return;
+
+    // processing
+    int digit = num % 10;
+    num = num / 10;
+
+    // recursive calls
+    sayNumber(num, arr);
+    cout << arr[digit] << " ";
+}
+
 int main(){
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
@@ -35,10 +48,14 @@ int main(){
     int desc = 10;
 
     reachHome(src, desc);
-*/
 
     int num; cin >> num;
     cout<<fibonacci(num);
+*/
+
+    string arr[10] = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
+    int num; cin >> num;
+    sayNumber(num, arr);
 
     return 0;
 }
