@@ -1,18 +1,22 @@
 #include <iostream>
 using namespace std;
 
-void reverseString(int start, int end, string &str){
+void reverseString(int start, string &str){
+    // int size = str.size();
+    // cout << size << endl;
+    // cout << str << endl;
+
     // base case
-    if(start > end) return;
+    if(start > str.size()/2) return;
 
 
     // processing
-    swap(str[start], str[end]);
-    start++; end--;
+    swap(str[start], str[str.size()-start-1]);
+    start++;
 
 
     //recursive calls
-    reverseString(start, end, str);
+    reverseString(start, str);
 }
 
 int main(){
@@ -24,10 +28,9 @@ int main(){
     string str; cin >> str;
     int len = str.size();
     int start = 0;
-    int end = len-1;
-    
+
     cout << str << endl;
-    reverseString(start, end, str);
+    reverseString(start, str);
     cout << str << endl;
 
 
